@@ -21,7 +21,6 @@ Este projeto surge como um exercício de resolução de problemas utilizando um 
 
 O sistema permite que os usuários escolham uma data disponível no calendário e selecionem um hotel dentre as opções disponíveis. Em seguida, é necessário preencher os dados pessoais, incluindo a data de check-out. Além disso, o sistema oferece uma funcionalidade para visualizar um registro detalhado de todas as reservas anteriores, fornecendo informações sobre os hóspedes e as datas de estadia nos hotéis.
 
-
 ## Tecnologias Utilizadas
 
 - **Frontend:**
@@ -29,12 +28,10 @@ O sistema permite que os usuários escolham uma data disponível no calendário 
   - NuxtJs
   - Axios
   - VuetifyJs
-  
 - **Backend:**
   - ASP.NET
   - SQLServer
   - EntityFrameWork
-
 
 ## Instalação
 
@@ -58,38 +55,37 @@ cd ZDZCode
 ### Instalação do Backend
 
 1. Na pasta ZDZCode.API vá até `appsettings.json` e coloque o seu banco de dados em DefaultConnection:
-![alt text](imgs-readme/image.png) 
+   ![alt text](imgs-readme/image.png)
 2. Execute o seguinte comando no `gerenciador de pacotes do Nuget` para subir as Migrations em seu banco de dados:
-    ```
-    update database
-    ```
+   ```
+   update database
+   ```
 3. Inicie o servidor em formato `HTTPS` (porta 7200)
- 
 
 ### Instalação do Frontend
 
-1. Navegue até o diretório do frontend:
-    ```
-    cd ZDZCode-Front
-    ```
+1. Navegue até o diretório do ZDZCode.Front:
+   ```
+   cd ZDZCode.Front
+   ```
 2. Instale as dependências:
-    ```
-    npm install
-    ```
+   ```
+   npm install
+   ```
 3. Inicie o aplicativo Nuxt:
-    ```
-    npm run dev
-    ```
+   ```
+   npm run dev
+   ```
 
 ## Uso
 
 1 - Entre `Hoteis` na aba de menu á esquerda
 ![hotéis](imgs-readme/image-1.png)
 
-2 - Selecione algum ``dia`` no caléndario, algum ``hotel`` e então clique em `agendar`
+2 - Selecione algum `dia` no caléndario, algum `hotel` e então clique em `agendar`
 ![alt text](imgs-readme/image-2.png)
 
-3 - Preencha ``todos`` os dados, preencha a `data de saída` e clique em `agendar`
+3 - Preencha `todos` os dados, preencha a `data de saída` e clique em `agendar`
 ![alt text](imgs-readme/image-3.png)
 ![alt text](imgs-readme/image-4.png)
 
@@ -117,7 +113,7 @@ ZDZCode/
 |   |    ├── appsettings.json
 |   |    ├── Program.cs
 │   └── ZDZCode.API.sln
-├── frontend/
+├── ZDZCode.Front/
 │   ├── assets/
 │   ├── components/
 │   ├── layouts/
