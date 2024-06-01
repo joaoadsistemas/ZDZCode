@@ -61,7 +61,7 @@ cd ZDZCode
    ![alt text](imgs-readme/image.png)
 2. Execute o seguinte comando no `gerenciador de pacotes do Nuget` para subir as Migrations em seu banco de dados:
    ```
-   update database
+   update-database
    ```
 3. Inicie o servidor em formato `HTTPS` (porta 7200)
 
