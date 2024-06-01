@@ -21,6 +21,9 @@ Este projeto surge como um exercício de resolução de problemas utilizando um 
 
 O sistema permite que os usuários escolham uma data disponível no calendário e selecionem um hotel dentre as opções disponíveis. Em seguida, é necessário preencher os dados pessoais, incluindo a data de check-out. Além disso, o sistema oferece uma funcionalidade para visualizar um registro detalhado de todas as reservas anteriores, fornecendo informações sobre os hóspedes e as datas de estadia nos hotéis.
 
+Diagrama de Classe:
+![alt text](class_diagram.png)
+
 ## Tecnologias Utilizadas
 
 - **Frontend:**
@@ -94,8 +97,6 @@ cd ZDZCode
 ![alt text](imgs-readme/image-6.png)
 
 ## Estrutura do Projeto
-
-Descreva a estrutura dos diretórios e arquivos principais do projeto. Exemplo:
 
 ```
 ZDZCode/
