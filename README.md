@@ -35,6 +35,7 @@ Diagrama de Classe:
   - ASP.NET
   - SQLServer
   - EntityFrameWork
+  - Docker
 
 ## Instalação
 
@@ -47,6 +48,7 @@ Instruções para configurar o ambiente de desenvolvimento local.
 - SQLServer
 - VisualStudio 2022
 - VisualStudio Code
+- Docker
 
 ### Clonagem do Repositório
 
@@ -57,15 +59,39 @@ cd ZDZCode
 
 ### Instalação do Backend
 
+#### COM DOCKER
+
+1. Abra o `docker` em sua máquina
+2. Vá até a pasta `ZDZCode.API` (onde está localizado o arquivo `docker-compose.yml`)
+3. Abra o terminal e digite o seguinte comando: `docker compose up -d`
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/c02203c6-fcb9-4e36-aeb0-568abfacec38)
+4. Pronto, agora só ver as etapas do [Front-end](#instalação-do-frontend)
+5. A porta acessível e a do DOCKER é a http://localhost:8002/swagger/index.html (http, e não https)
+
+#### SEM DOCKER
+
 1. Na pasta ZDZCode.API vá até `appsettings.json` e coloque o seu banco de dados em DefaultConnection:
    ![alt text](imgs-readme/image.png)
-2. Execute o seguinte comando no `gerenciador de pacotes do Nuget` para subir as Migrations em seu banco de dados:
+2. Vá ate `program.cs` e apague o `connectionString` de dentro do opt.UseSQLServer
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/9ff6df07-7e7d-42a9-97e4-3d91f457d1ed)
+3. Após isso cole toda a linha quen está comentada em baixo (que pega a sua string de conexão local)
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/7c791b29-8aaa-49a9-9919-7a2ce8938a2b)
+4. Execute o seguinte comando no `gerenciador de pacotes do Nuget` para subir as Migrations em seu banco de dados:
    ```
    update-database
    ```
-3. Inicie o servidor em formato `HTTPS` (porta 7200)
+5. Inicie o servidor em formato `HTTPS` (porta 7200)
 
 ### Instalação do Frontend
+
+#### SEM DOCKER
+
+1. Vá até o diretório ZDZCode.Front e abra o arquivo `urls.js`
+2. Basta colar na apiUrl`` o valor que está comentado no Local
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/61386049-f575-4895-b58d-8646f64ea254)
+3. Após isso basta seguir os passos que estão descritos abaixo na sessão `COM DOCKER`
+
+#### COM DOCKER
 
 1. Navegue até o diretório do ZDZCode.Front:
    ```
