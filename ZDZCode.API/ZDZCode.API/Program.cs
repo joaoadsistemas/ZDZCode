@@ -25,7 +25,7 @@ namespace ZDZCode.API
             var dbPassword = Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
             var connectionString = $"Data Source={dbHost};Initial Catalog={dbName};User ID=sa;Password={dbPassword};TrustServerCertificate=True";
             builder.Services.AddDbContext<SystemDbContext>(opt => 
-                opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                opt.UseSqlServer(connectionString));
             //builder.Configuration.GetConnectionString("DefaultConnection")) // SE QUISER USAR O SQL BASTA COLAR ESSA LINHA DENTRO DO "opt => opt.UseSqlServer(!AQUI!)"
             /* ===================================== */
 
