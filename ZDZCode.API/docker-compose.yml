@@ -1,0 +1,35 @@
+version: '3.4'
+
+
+networks:
+  zdzcodenetwork:
+
+services:
+  zdzcodedb:
+    container_name: zdzcodedb
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 8001:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=rootRoot@123
+    networks:
+      - zdzcodenetwork
+  zdzcodeapi:
+    container_name: zdzcodeapi
+    image: ${DOCKER_REGISTRY-}zdzcodeapi
+    build:
+      context: .
+      dockerfile: ZDZCode.API/Dockerfile
+    ports:
+        - 8002:8080
+        - 8003:8081
+    depends_on:
+        - zdzcodedb
+    environment:
+      - DB_HOST=zdzcodedb
+      - DB_NAME=ZDZCode
+      - DB_SA_PASSWORD=rootRoot@123
+      - ASPNETCORE_URLS=http://+:8080
+    networks:
+      - zdzcodenetwork

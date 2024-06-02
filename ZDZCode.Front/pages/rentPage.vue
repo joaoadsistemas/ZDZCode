@@ -80,6 +80,7 @@
 <script>
 import axios from 'axios';
 import { VueMaskDirective } from 'v-mask';
+import urls from '@/urls'; // Importa o arquivo de configuração
 
 export default {
   directives: {
@@ -122,7 +123,7 @@ export default {
     },
     async viewAllBookings(hotelId) {
       try {
-        const response = await axios.get(`https://localhost:7200/hotels/${hotelId}`);
+        const response = await axios.get(`${urls.apiUrl}/hotels/${hotelId}`);
         console.log('Carregando agendamentos...', response);
         this.rents = response.data[0].rents;
         this.bookingsModalOpen = true;
@@ -156,7 +157,7 @@ export default {
 
         try {
           console.log('Enviando dados para a API...', rentData);
-          const response = await axios.post('https://localhost:7200/rents', rentData);
+          const response = await axios.post(`${urls.apiUrl}/rents`, rentData);
           this.closeModal();
         } catch (error) {
           console.error('Erro ao agendar:', error);
@@ -167,7 +168,7 @@ export default {
     },
     async fetchHotels() {
       try {
-        const response = await axios.get('https://localhost:7200/hotels');
+        const response = await axios.get(`${urls.apiUrl}/hotels`);
         this.hotels = response.data;
       } catch (error) {
         console.error('Erro ao carregar hotéis:', error);
@@ -181,7 +182,6 @@ export default {
   mounted() {
     this.fetchHotels();
   }
-
 };
 </script>
 
