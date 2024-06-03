@@ -32,5 +32,33 @@ namespace ZDZCode.API.Controllers
 
             return Ok(result);
         }
+
+
+        [HttpPut("{personId}")]
+        public async Task<ActionResult<bool>> UpdateRent([FromBody] RentInsertDTO dto, Guid personId)
+        {
+            var result = await _rentService.UpdateRent(dto, personId);
+
+            if (!result)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
+        [HttpDelete("{personId}/{hotelId}")]
+        public async Task<ActionResult<bool>> DeleteRent(Guid hotelId, Guid personId)
+        {
+            var result = await _rentService.DeleteRent(personId, hotelId);
+
+            if (!result)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
     }
 }

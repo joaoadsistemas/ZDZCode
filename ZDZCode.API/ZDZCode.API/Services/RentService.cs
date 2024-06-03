@@ -19,5 +19,17 @@ namespace ZDZCode.API.Services
             var result = await _rentRepository.AddRent(dto);
             return result;
         }
+
+        public async Task<bool> UpdateRent(RentInsertDTO dto, Guid personId)
+        {
+            var result = await _rentRepository.UpdateRent(dto, personId);
+            return result;
+        }
+
+        public async Task<bool> DeleteRent(Guid personId, Guid hotelId)
+        {
+            var result = await _rentRepository.DeleteRent(personId, hotelId);
+            return result;
+        }
     }
 }

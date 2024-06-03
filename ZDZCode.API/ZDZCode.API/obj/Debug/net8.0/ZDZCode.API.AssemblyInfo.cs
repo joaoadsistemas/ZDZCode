@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZDZCode.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c1c5c6effe06eab457c4e690b429d4d8808e8d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2371f50ab031e8a5c56345524b1b1903afd3fa2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZDZCode.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZDZCode.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

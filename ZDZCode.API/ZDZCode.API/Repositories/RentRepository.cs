@@ -57,5 +57,55 @@ namespace ZDZCode.API.Repositories
             return true;
 
         }
+
+        public async Task<bool> UpdateRent(RentInsertDTO dto, Guid personId)
+        {
+            var hotel = await _dbContext.Hotels.FirstOrDefaultAsync(h => h.Id == dto.HotelId);
+
+            var person = await _dbContext.People.FirstOrDefaultAsync(p => p.Id == personId);
+
+            if (person == null)
+            {
+                return false;
+
+            }
+
+
+            var rent = await _dbContext.Rents.FirstOrDefaultAsync(r => r.PersonId == personId && r.HotelId == dto.HotelId);
+
+            if (rent == null)
+            {
+                return false;
+            }
+
+            rent.DepartureDate = dto.DepartureDate;
+
+            person.CPF = dto.Person.CPF;
+            person.Email = dto.Person.Email;
+            person.LastName = dto.Person.LastName;
+            person.Name = dto.Person.Name;
+            person.Phone = dto.Person.Phone;
+
+            _dbContext.Rents.Update(rent);
+            _dbContext.People.Update(person);
+            await _dbContext.SaveChangesAsync();
+            return true;
+
+        }
+
+        public async Task<bool> DeleteRent(Guid personId, Guid hotelId)
+        {
+            var rent = await _dbContext.Rents.FirstOrDefaultAsync(r => r.PersonId == personId && r.HotelId == hotelId);
+
+            if (rent == null)
+            {
+                return false;
+            }
+
+            _dbContext.Remove(rent);
+           await _dbContext.SaveChangesAsync();
+
+           return true;
+        }
     }
 }
