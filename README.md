@@ -19,7 +19,7 @@ Um projeto para controle de Agendamento de Hotéis
 
 Este projeto surge como um exercício de resolução de problemas utilizando um conjunto específico de tecnologias, detalhadas na seção de [tecnologias utilizadas](#tecnologias-utilizadas). A proposta central foi a criação de um sistema de controle de reservas de hotéis, oferecendo uma experiência intuitiva e eficiente para os usuários.
 
-O sistema permite que os usuários escolham uma data disponível no calendário e selecionem um hotel dentre as opções disponíveis. Em seguida, é necessário preencher os dados pessoais, incluindo a data de check-out. Além disso, o sistema oferece uma funcionalidade para visualizar um registro detalhado de todas as reservas anteriores, fornecendo informações sobre os hóspedes e as datas de estadia nos hotéis.
+O sistema permite que os usuários escolham uma data disponível no calendário e selecionem um hotel dentre as opções disponíveis. Em seguida, é necessário preencher os dados pessoais, incluindo a data de check-out. Além disso, o sistema oferece uma funcionalidade para visualizar um registro detalhado de todas as reservas anteriores, fornecendo informações sobre os hóspedes e as datas de estadia nos hotéis, bem como você poder editar as informações da data de saída e dados do usuário, além de poder excluir essa reserva.
 
 Diagrama de Classe:
 ![alt text](class_diagram.png)
@@ -120,7 +120,19 @@ cd ZDZCode
 
 4 - Após isso clicando em `ver todos os agendamentos` poderá ver a pessoa cadastrada
 ![alt text](imgs-readme/image-5.png)
-![alt text](imgs-readme/image-6.png)
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/f17db2fc-a1d6-4f1c-b15a-f6928f325c8b)
+
+5 - Ao clicar no ícone do lápis é possível alterar os dados do usuário
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/ef4356a4-919d-4537-a0f9-bf555d3cf918)
+
+6 - Neste exemplo alteramos o email e sua data de saída e clicamos em `atualizar`
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/b4b6a82e-c345-465f-9a33-5a4996162415)
+
+7 - Podemos também clicar na lixeira para apagar a reserva deste usuário
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/cec02395-f782-4cd2-9972-8f5b7b9f6020)
+![image](https://github.com/joaoadsistemas/ZDZCode/assets/121246045/4776f2b8-f142-42b3-98cd-381ef06f7273)
+
+
 
 ## Estrutura do Projeto
 
